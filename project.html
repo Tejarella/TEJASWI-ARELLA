@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Tejaswi Arella</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      overflow-x: hidden;
+    }
+    
+    .orbitron {
+      font-family: 'Orbitron', monospace;
+    }
+    
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-strong {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0, 150, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 100, 255, 0.1);
+    }
+    
+    /* Neon effects */
+    .neon-text {
+      text-shadow: 
+        0 0 5px rgba(0, 150, 255, 0.5),
+        0 0 10px rgba(0, 150, 255, 0.3),
+        0 0 15px rgba(0, 150, 255, 0.2);
+    }
+    
+    .neon-border {
+      box-shadow: 
+        0 0 10px rgba(0, 150, 255, 0.3),
+        inset 0 0 10px rgba(0, 150, 255, 0.1);
+      border: 1px solid rgba(0, 150, 255, 0.3);
+    }
+    
+    .neon-btn {
+      background: linear-gradient(45deg, rgba(0, 100, 255, 0.1), rgba(0, 200, 255, 0.1));
+      border: 1px solid rgba(0, 150, 255, 0.3);
+      box-shadow: 
+        0 0 20px rgba(0, 150, 255, 0.2),
+        inset 0 0 20px rgba(0, 150, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .neon-btn:hover {
+      box-shadow: 
+        0 0 30px rgba(0, 150, 255, 0.4),
+        inset 0 0 30px rgba(0, 150, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    /* Project card styling */
+    .project-card {
+      transition: all 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 150, 255, 0.2);
+    }
+    
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00ccff;
+      text-shadow: 0 0 10px rgba(0, 150, 255, 0.5);
+    }
+    
+    /* Navigation improvements */
+    .nav-link {
+      position: relative;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+    
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::before {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      background: rgba(0, 150, 255, 0.1);
+      color: #00ccff;
+      transform: translateY(-2px);
+    }
+    
+    /* Tag styling */
+    .project-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(0, 150, 255, 0.1);
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid rgba(0, 150, 255, 0.3);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Navbar -->
+  <nav class="glass-strong p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-400 orbitron neon-text">PORTFOLIO</a>
+      <ul class="flex space-x-2 md:space-x-6">
+        <li><a href="index.html" class="nav-link text-sm md:text-base">Home</a></li>
+        <li><a href="about.html" class="nav-link text-sm md:text-base">About</a></li>
+        <li><a href="skills.html" class="nav-link text-sm md:text-base">Skills</a></li>
+        <li><a href="projects.html" class="nav-link text-sm md:text-base">Projects</a></li>
+        <li><a href="experience.html" class="nav-link text-sm md:text-base">Experience</a></li>
+        <li><a href="contact.html" class="nav-link text-sm md:text-base">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Projects Section -->
+  <section class="min-h-screen py-20 pt-32">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-8 orbitron neon-text">My <span class="text-blue-400">Projects</span></h2>
+      <p class="text-center text-lg text-gray-300 mb-12 max-w-2xl mx-auto">
+        Here are some of my notable projects showcasing my skills in web development, machine learning, and robotics.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Servigoo Project -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-blue-400">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-blue-400">Servigoo</h3>
+          <p class="text-gray-300 mb-4">A prototype for booking on-demand home services with user authentication and service listings.</p>
+          <div class="mb-4">
+            <span class="project-tag">Web Development</span>
+            <span class="project-tag">PHP</span>
+            <span class="project-tag">MySQL</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+        
+        <!-- ZenYogi Project -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-green-400">
+            <i class="fas fa-spa"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-green-400">ZenYogi</h3>
+          <p class="text-gray-300 mb-4">Designed and developed a responsive frontend for a yoga-focused wellness platform.</p>
+          <div class="mb-4">
+            <span class="project-tag">Web Design</span>
+            <span class="project-tag">HTML/CSS</span>
+            <span class="project-tag">Bootstrap</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+        
+        <!-- Music Genre Classification -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-purple-400">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-purple-400">Music Genre Classification</h3>
+          <p class="text-gray-300 mb-4">ML model using audio features (MFCCs, Chroma) to classify music genres, deployed via Streamlit.</p>
+          <div class="mb-4">
+            <span class="project-tag">Machine Learning</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Streamlit</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+        
+        <!-- Home Loan Prediction -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-yellow-400">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-yellow-400">Home Loan Prediction</h3>
+          <p class="text-gray-300 mb-4">Classification model using Logistic Regression and Decision Trees to predict loan approvals.</p>
+          <div class="mb-4">
+            <span class="project-tag">Data Science</span>
+            <span class="project-tag">Scikit-learn</span>
+            <span class="project-tag">Pandas</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+        
+        <!-- Railway Crack Detector -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-red-400">
+            <i class="fas fa-robot"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-red-400">Railway Crack Detector</h3>
+          <p class="text-gray-300 mb-4">Robotic system with IR sensors to detect cracks in railway tracks, enhancing safety.</p>
+          <div class="mb-4">
+            <span class="project-tag">Robotics</span>
+            <span class="project-tag">Arduino</span>
+            <span class="project-tag">Embedded Systems</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+        
+        <!-- Automatic Roofing System -->
+        <div class="glass project-card p-6 neon-border">
+          <div class="project-icon text-cyan-400">
+            <i class="fas fa-cloud-sun-rain"></i>
+          </div>
+          <h3 class="text-2xl font-semibold mb-3 text-cyan-400">Automatic Roofing System</h3>
+          <p class="text-gray-300 mb-4">Robotic setup with environmental sensors to automate crop cover operations based on weather.</p>
+          <div class="mb-4">
+            <span class="project-tag">IoT</span>
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">Sensors</span>
+          </div>
+          <a href="#" class="neon-btn inline-block py-2 px-4 rounded-full text-sm font-semibold">
+            <i class="fas fa-external-link-alt mr-2"></i>View Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

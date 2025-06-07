@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tejaswi Arella - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      overflow-x: hidden;
+    }
+    
+    .orbitron {
+      font-family: 'Orbitron', monospace;
+    }
+    
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-strong {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0, 150, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 100, 255, 0.1);
+    }
+    
+    /* Neon effects */
+    .neon-text {
+      text-shadow: 
+        0 0 5px rgba(0, 150, 255, 0.5),
+        0 0 10px rgba(0, 150, 255, 0.3),
+        0 0 15px rgba(0, 150, 255, 0.2);
+    }
+    
+    .neon-border {
+      box-shadow: 
+        0 0 10px rgba(0, 150, 255, 0.3),
+        inset 0 0 10px rgba(0, 150, 255, 0.1);
+      border: 1px solid rgba(0, 150, 255, 0.3);
+    }
+    
+    .neon-btn {
+      background: linear-gradient(45deg, rgba(0, 100, 255, 0.1), rgba(0, 200, 255, 0.1));
+      border: 1px solid rgba(0, 150, 255, 0.3);
+      box-shadow: 
+        0 0 20px rgba(0, 150, 255, 0.2),
+        inset 0 0 20px rgba(0, 150, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .neon-btn:hover {
+      box-shadow: 
+        0 0 30px rgba(0, 150, 255, 0.4),
+        inset 0 0 30px rgba(0, 150, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    /* Profile picture effects */
+    .profile-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    
+    .profile-pic {
+      width: 197px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid rgba(0, 150, 255, 0.5);
+      box-shadow: 
+        0 0 30px rgba(0, 150, 255, 0.3),
+        inset 0 0 30px rgba(0, 150, 255, 0.1);
+      background: linear-gradient(45deg, rgba(0, 100, 255, 0.1), rgba(0, 200, 255, 0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      color: rgba(0, 150, 255, 0.7);
+    }
+    
+    /* Navigation improvements */
+    .nav-link {
+      position: relative;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+    
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::before {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      background: rgba(0, 150, 255, 0.1);
+      color: #00ccff;
+      transform: translateY(-2px);
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+      }
+      
+      .profile-container {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Navbar -->
+  <nav class="glass-strong p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-400 orbitron neon-text">PORTFOLIO</a>
+      <ul class="flex space-x-2 md:space-x-6">
+        <li><a href="index.html" class="nav-link text-sm md:text-base">Home</a></li>
+        <li><a href="about.html" class="nav-link text-sm md:text-base">About</a></li>
+        <li><a href="skills.html" class="nav-link text-sm md:text-base">Skills</a></li>
+        <li><a href="project.html" class="nav-link text-sm md:text-base">Projects</a></li>
+        <li><a href="experience.html" class="nav-link text-sm md:text-base">Experience</a></li>
+        <li><a href="contact.html" class="nav-link text-sm md:text-base">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative pt-20">
+    <div class="container mx-auto text-center px-4">
+      <!-- Profile Picture -->
+      <div class="profile-container mb-8">
+        <div class="profile-pic">
+           <!-- <div class="profile-container"> -->
+            <img src="myphoto.jpg" alt="Tejaswi Arella" class="profile-pic">
+           <!-- </div> -->
+          <!-- <i class="fas fa-user"></i> -->
+        </div>
+      </div>
+      
+      <!-- Main Content -->
+      <div class="glass rounded-2xl p-8 md:p-12 max-w-4xl mx-auto neon-border">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 orbitron neon-text">
+          Hi, I'm <span class="text-blue-400">Tejaswi Arella</span>
+        </h1>
+        
+        <div class="text-lg md:text-xl mb-8 space-y-2">
+          <p class="inline-block">Aspiring Software Developer</p>
+          <br>
+          <p class="text-blue-300">AI & ML Enthusiast | Web Developer</p>
+          <p class="text-gray-300 text-base md:text-lg mt-4">
+            Crafting the future through code, one algorithm at a time
+          </p>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="projects.html" class="neon-btn py-3 px-8 rounded-full text-white font-semibold transition-all duration-300">
+            <i class="fas fa-rocket mr-2"></i>
+            View My Work
+          </a>
+          
+          <a href="contact.html" class="glass py-3 px-8 rounded-full text-blue-300 font-semibold hover:bg-blue-900/20 transition-all duration-300 border border-blue-500/30">
+            <i Ascent
+            <i class="fas fa-envelope mr-2"></i>
+            Get In Touch
+          </a>
+        </div>
+        
+        <!-- Tech Stack Icons -->
+        <div class="mt-12 flex justify-center space-x-6 text-2xl">
+          <i class="fab fa-html5 text-orange-500 hover:text-orange-400 transition-colors cursor-pointer" title="HTML"></i>
+          <i class="fab fa-css3-alt text-blue-500 hover:text-blue-400 transition-colors cursor-pointer" title="CSS"></i>
+          <i class="fab fa-js-square text-yellow-400 hover:text-yellow-300 transition-colors cursor-pointer" title="JavaScript"></i>
+          <i class="fab fa-python text-blue-400 hover:text-blue-300 transition-colors cursor-pointer" title="Python"></i>
+          <i class="fab fa-java text-red-500 hover:text-red-400 transition-colors cursor-pointer" title="Java"></i>
+          <i class="fab fa-php text-indigo-500 hover:text-indigo-400 transition-colors cursor-pointer" title="PHP"></i>
+          <i class="fas fa-database text-emerald-500 hover:text-emerald-400 transition-colors cursor-pointer" title="MySQL"></i>
+          <i class="fab fa-react text-cyan-400 hover:text-cyan-300 transition-colors cursor-pointer" title="React"></i>
+          <i class="fas fa-brain text-purple-400 hover:text-purple-300 transition-colors cursor-pointer" title="Machine Learning / AI"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', anchor => {
+        anchor.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

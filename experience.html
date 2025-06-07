@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Tejaswi Arella</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+      overflow-x: hidden;
+    }
+    
+    .orbitron {
+      font-family: 'Orbitron', monospace;
+    }
+    
+    /* Glassmorphism effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    
+    .glass-strong {
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(0, 150, 255, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 100, 255, 0.1);
+    }
+    
+    /* Neon effects */
+    .neon-text {
+      text-shadow: 
+        0 0 5px rgba(0, 150, 255, 0.5),
+        0 0 10px rgba(0, 150, 255, 0.3),
+        0 0 15px rgba(0, 150, 255, 0.2);
+    }
+    
+    .neon-border {
+      box-shadow: 
+        0 0 10px rgba(0, 150, 255, 0.3),
+        inset 0 0 10px rgba(0, 150, 255, 0.1);
+      border: 1px solid rgba(0, 150, 255, 0.3);
+    }
+    
+    .neon-btn {
+      background: linear-gradient(45deg, rgba(0, 100, 255, 0.1), rgba(0, 200, 255, 0.1));
+      border: 1px solid rgba(0, 150, 255, 0.3);
+      box-shadow: 
+        0 0 20px rgba(0, 150, 255, 0.2),
+        inset 0 0 20px rgba(0, 150, 255, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .neon-btn:hover {
+      box-shadow: 
+        0 0 30px rgba(0, 150, 255, 0.4),
+        inset 0 0 30px rgba(0, 150, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    /* Navigation improvements */
+    .nav-link {
+      position: relative;
+      padding: 8px 16px;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+    
+    .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #0066ff, #00ccff);
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::before {
+      width: 100%;
+    }
+    
+    .nav-link:hover {
+      background: rgba(0, 150, 255, 0.1);
+      color: #00ccff;
+      transform: translateY(-2px);
+    }
+    
+    /* Responsive improvements */
+    @media (max-width: 768px) {
+      .nav-link {
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <!-- Navbar -->
+  <nav class="glass-strong p-4 fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold text-blue-400 orbitron neon-text">Tejaswi Arella</a>
+      <ul class="flex space-x-2 md:space-x-6">
+        <li><a href="index.html" class="nav-link text-sm md:text-base">Home</a></li>
+        <li><a href="about.html" class="nav-link text-sm md:text-base">About</a></li>
+        <li><a href="skills.html" class="nav-link text-sm md:text-base">Skills</a></li>
+        <li><a href="project.html" class="nav-link text-sm md:text-base">Projects</a></li>
+        <li><a href="experience.html" class="nav-link text-sm md:text-base text-blue-400">Experience</a></li>
+        <li><a href="contact.html" class="nav-link text-sm md:text-base">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Experience Section -->
+  <section class="min-h-screen py-20 pt-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 orbitron neon-text">Experience & Activities</h2>
+      <div class="space-y-8 max-w-4xl mx-auto">
+        <div class="glass p-6 rounded-lg neon-border transition duration-300">
+          <div class="flex items-start">
+            <i class="fas fa-briefcase text-blue-400 text-xl mt-1 mr-4"></i>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 orbitron">Tech-Lead Intern - Summer of AI 2025, Viswam.AI</h3>
+              <p class="text-gray-300">Developed AI pipelines using Python and NLP, guided model fine-tuning, and contributed to projects supporting local languages at IIIT Hyderabad.</p>
+              <p class="text-gray-400 text-sm mt-2">June 2025 - August 2025</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass p-6 rounded-lg neon-border transition duration-300">
+          <div class="flex items-start">
+            <i class="fas fa-chalkboard-teacher text-blue-400 text-xl mt-1 mr-4"></i>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 orbitron">Student Mentor - College Club</h3>
+              <p class="text-gray-300">Guided 10 students in completing a robotics project successfully, providing technical support and project management guidance.</p>
+              <p class="text-gray-400 text-sm mt-2">2024 - 2025</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass p-6 rounded-lg neon-border transition duration-300">
+          <div class="flex items-start">
+            <i class="fas fa-paint-brush text-blue-400 text-xl mt-1 mr-4"></i>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 orbitron">Designing Head - College Club</h3>
+              <p class="text-gray-300">Led a team of 5 designers in creating posters, social media content, and event branding using Canva and Adobe Photoshop, increasing club engagement by 40%.</p>
+              <p class="text-gray-400 text-sm mt-2">2023 - 2024</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass p-6 rounded-lg neon-border transition duration-300">
+          <div class="flex items-start">
+            <i class="fas fa-calendar-alt text-blue-400 text-xl mt-1 mr-4"></i>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 orbitron">Coordinator - RoboVeda'24</h3>
+              <p class="text-gray-300">Organized and managed all-terrain bot competitions at Sarvaagami Event, coordinating between 15 teams and ensuring smooth execution of the competition.</p>
+              <p class="text-gray-400 text-sm mt-2">March 2024</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="glass p-6 rounded-lg neon-border transition duration-300">
+          <div class="flex items-start">
+            <i class="fas fa-book text-blue-400 text-xl mt-1 mr-4"></i>
+            <div>
+              <h3 class="text-2xl font-semibold mb-2 orbitron">Publication - Book Chapter</h3>
+              <p class="text-gray-300">Co-authored a chapter on AI/ML optimization in "Optimization Tools and Techniques for Enhanced Computational Efficiency," published by IGI Global in 2024.</p>
+              <p class="text-gray-400 text-sm mt-2">January 2024</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Add smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
